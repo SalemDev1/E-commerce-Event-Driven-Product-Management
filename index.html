@@ -1,0 +1,26 @@
+<!-- Task 1: Setup Product HTML Structure -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cologne Shop - Dior Sauvage Elixir</title>
+</head>
+<body>
+    <img src="https://media.ulta.com/i/ulta/2585889?w=1080&h=1080&fmt=auto" alt="Dior Sauvage Elixir Image" width="150" height="150">
+    <h2 id="product-name">Dior Sauvage Elixir</h2> 
+    <p id="product-price">$193</p> 
+    
+    <label for="size-selector">Select Size:</label>
+    <select id="size-selector">
+        <option value="small" data-price="193" data-stock="true">2.4oz (88ml): In Stock</option>
+        <option value="medium" data-price="255" data-stock="true">3.4oz (100ml): In Stock</option>
+        <option value="large" data-price="8200" data-stock="false">16oz (800ml): Out of Stock (Dior Sauvage Elixir X Baccarat Special Edition)</option>
+    </select>
+
+    <button id="purchase-btn">Buy Now</button>
+
+    <script src="main.js"></script> 
+
+</body>
+</html>
