@@ -15,7 +15,7 @@ sizeSelector.addEventListener('change', function(event) {
     // Checks to see if the selected size is in stock
     const isInStock = selectedOption.getAttribute('data-stock') === 'true';
     purchaseButton.disabled = !isInStock;
-
+    purchaseButton.disabled = false;  // Ensured that button is always enabled despite it says out of stock so it may display that message
     // Changes the button text based on stock availability (Sorry Big Ballers, No Expensive bottle today)
     if (isInStock) {
         purchaseButton.textContent = "Buy Now";
