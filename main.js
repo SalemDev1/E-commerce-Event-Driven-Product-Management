@@ -22,3 +22,16 @@ sizeSelector.addEventListener('change', function(event) {
         purchaseButton.textContent = "Out of Stock";
     }
 });
+
+//Task 3- Handle Stock Availability
+purchaseButton.addEventListener('click', function() {
+    const selectedOption = sizeSelector.options[sizeSelector.selectedIndex];
+    const isInStock = selectedOption.getAttribute('data-stock') === 'true';
+
+    // Checks the stock availability before displaying these messages seen below 
+    if (isInStock) {
+        alert("Thank you for your purchase of Dior Sauvage Elixir!");
+    } else {
+        alert("Sorry, this product is out of stock.");
+    }
+});
