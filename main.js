@@ -1,4 +1,4 @@
-//Task 2-Add Event Listeners for Product Selection 
+//Task 2-Add Event Listeners for Product Selection  
 const priceDisplay = document.getElementById('bottle-price');  
 const sizeSelector = document.getElementById('bottle-size');   
 const purchaseButton = document.getElementById('buy-button');  
@@ -11,6 +11,7 @@ sizeSelector.addEventListener('change', function(event) {
     const newPrice = selectedOption.getAttribute('data-price');
     priceDisplay.textContent = `$${newPrice}`;
     
+    // Task 3 technically starts here, Handle Stock Availability (its been a long night go easy on me)
     // Checks to see if the selected size is in stock
     const isInStock = selectedOption.getAttribute('data-stock') === 'true';
     purchaseButton.disabled = !isInStock;
@@ -23,7 +24,7 @@ sizeSelector.addEventListener('change', function(event) {
     }
 });
 
-//Task 3- Handle Stock Availability
+//Task 4- Create a Checkout Event
 purchaseButton.addEventListener('click', function() {
     const selectedOption = sizeSelector.options[sizeSelector.selectedIndex];
     const isInStock = selectedOption.getAttribute('data-stock') === 'true';
@@ -32,6 +33,7 @@ purchaseButton.addEventListener('click', function() {
     if (isInStock) {
         alert("Thank you for your purchase of Dior Sauvage Elixir!");
     } else {
-        alert("Sorry, this product is out of stock.");
+        alert("Sorry, this luxiours cologne is out of stock, so no ladies for you man, -5000 aura");
     }
 });
+
